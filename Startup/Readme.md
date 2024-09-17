@@ -30,8 +30,8 @@ MCU need to be exact same, 89C series can not use Check MCU, but can click on MC
 
 ## Select Hex and Download to MCU
 Open target hex file, and Download to MCU  
-  
-###  **Tips**
-MCU requires power ON-OFF to download program
+
+> [!IMPORTANT]
+> MCU requires power ON-OFF to download program  
   
   <img src="./Image/06.SelectHex_Burn.png">  
