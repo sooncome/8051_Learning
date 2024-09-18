@@ -16,7 +16,8 @@ sfr P1 = 0x90;
 sfr P2 = 0xA0;
 sfr P3 = 0xB0;
 ```
-
+>[!NOTE]
+>sfr is definition address of byte
 # Light LED
 ```
 #include <REGX52.H>
@@ -38,7 +39,8 @@ LED connection, Anode to 5V through 10k resistor, Cathod to P2.0, to light up LE
 >P2^0 means the 0bit of P2 port
   
 # Complile
-After build(F7), the complier will output hex file and size of the program
+After build(F7), the complier will output hex file and size of the program  
+Build output  
 ```
 Build target 'Target 1'
 linking...
@@ -46,3 +48,10 @@ Program Size: data=9.0 xdata=0 code=19
 creating hex file from "01.1.LED_LightUP"...
 "01.1.LED_LightUP" - 0 Error(s), 0 Warning(s).
 ```
+  
+Comploer result:  
+  * code: volume used for flash
+  * data: volume used for internal RAM
+  * xdata: volume used for external RAM
+>[!NOTE]
+>Program size is total of code+data+xdata, not size of hex file
