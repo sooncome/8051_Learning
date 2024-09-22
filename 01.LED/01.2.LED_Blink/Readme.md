@@ -44,17 +44,22 @@ Simply use MCU clock to make delay, this function cannot be very percise, for pe
 ## Keil simualtor
 In the delay function, how to know that delay_10us(50000); is around 450ms  
 This will need to use simualtor of Keil to simulate  
-1. Setup Xtal Frequency
-  <img src="./image/01.Xtal_set.jpg">  
+### 1. Setup Xtal Frequency
   In **Target Option**, Page **Target**, Xtal(Mhz) must be the crystal oscillator connected to, to simulate correct time  
-2. Enter Debug Session
-  <img src="./image/02.Debug_Session.jpg">
+  <img src="./image/01.Xtal_set.jpg">  
+  
+### 2. Enter Debug Session
   Quick Key "Ctrl + F5"  
-3. Simulate  
-  <img src="./image/03.Reset.jpg">  
+  <img src="./image/02.Debug_Session.jpg">
+  
+### 3. Simulate  
   Click on **RST**, at this moment **sec** is 0, on right code double click on target line to make break point  
   Break point can cancel by double click on it again  
-  <img src="./image/04.Run_pasue_on_pause_point.jpg">  
+  <img src="./image/03.Reset.jpg">  
+
   Click on **Run**(F5), the program will pause on Line17, at this moment, time passed sec=0.00039s  
+  <img src="./image/04.Run_pasue_on_pause_point.jpg">  
+
+  Click on **Run**(F5) again, the program will pause on Line18, at this moment, time passed sec=0.450601s  
   <img src="./image/05.delay_time.jpg">  
-  Click on **Run**(F5) again, the program will pause on Line18, at this moment, time passed sec=0.450601s
+  
